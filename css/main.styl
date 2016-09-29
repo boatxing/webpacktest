@@ -1,0 +1,308 @@
+/**
+ * @desc 基础样式
+ * @author boatxing
+ * @mail boatxing@qq.com
+ * @date 14-5-27
+ */
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+display-box()
+  display -webkit-box
+  display -moz-box
+  display box
+
+box-flex(n = 1){
+  -webkit-box-flex n
+  -moz-box-flex n
+  -ms-box-flex n
+  box-flex n
+}
+
+background-size()
+  -webkit-background-size arguments
+  -moz-background-origin arguments
+  -o-background-size arguments
+
+a, img, button, input, select
+  -webkit-tap-highlight-color: transparent
+  outline: 0
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td
+  margin: 0
+  padding: 0
+  vertical-align: baseline
+
+i, em
+  font-style: normal
+
+ol, ul
+  list-style: none
+
+input, select, button, h1, h2, h3, h4, h5, h6
+  font-size: 100%
+  font-family: inherit
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+a
+  text-decoration: none
+  color: #333
+
+body
+  margin: 0 auto
+  min-width: 320px
+  max-width: 640px
+  height: 100%
+  background: #fff
+  font-size: 14px
+  font-family 'Microsoft YaHei', Helvetica, 'STHeiti STXihei', 'Microsoft JhengHei', Arial
+  line-height: 1.5
+  color: #666
+  -webkit-text-size-adjust: 100%
+  -webkit-user-select: none
+  user-select: none
+
+.hide, .h
+  display: none !important
+
+.show
+  display: block !important
+
+h1
+  font-size 36px
+
+h2
+  font-size 30px
+
+h3
+  font-size 24px
+
+h4
+  font-size 18px
+
+h5
+  font-size 16px
+
+h6
+  font-size 14px
+
+.tips
+  color #bbb
+
+.warn-tips
+  background-color #fcf8e3
+  border 1px solid #faebcc
+  color #8a6d3b
+  padding 0px 10px
+  display block
+  cursor pointer
+
+.alert
+  padding 10px
+  border-radius 4px
+  border 1px solid transparent
+  display block
+  text-align center
+  overflow  hidden
+
+.alert-warning
+  color #8a6d3b
+  background-color #ffff00
+  border-color #ed9c28
+
+//错误提示
+.err .tips
+  color #ff0000
+
+.err input, .err select,.err textarea
+  border 2px solid #ff0000
+
+//按钮
+.btn
+  width 100%
+  display block
+  line-height 40px
+  text-align center
+  border-radius 4px
+  font-size 16px
+  cursor pointer
+  text-decoration none
+  border 1px solid transparent
+  -webkit-user-select none
+  -o-user-select none
+  user-select none
+  color #fff
+
+.btn-default
+  color #333
+  background-color #fff
+  border-color #ccc
+
+
+.btn-primary
+  background-color #b28750
+
+.btn-success
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+
+.btn-info
+  background-color #9f7439
+
+.btn-warn
+  background-color #362e2b
+
+.btn-danger
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+
+.btn-samll
+  width 50px
+  line-height 26px
+  font-size 14px
+
+.btn-link
+  border-color transparent
+  text-decoration underline
+  display block
+
+//图片
+img
+  border: 0 none
+  vertical-align: middle
+
+.img-circle
+  border-radius 50%
+
+.img-rounded
+  border-radius 6px
+
+.img-thumbnail
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out
+
+//表单
+.form-group {
+  padding 5px
+  h5 {
+    margin-bottom 5px
+    font-weight normal
+    color #333
+  }
+  input, select {
+    height 33px
+    line-height 33px
+    width 100%
+    border-radius 5px
+    border 1px solid #e3cc7c
+  }
+  input[type=file]{
+   // height: auto
+  }
+  textarea {
+    height 70px
+    width 100%
+    border-radius 5px
+    border 1px solid #e3cc7c
+  }
+}
+
+//头部
+header {
+  height: 45px
+  position: relative
+  background-color #e3cc7e
+  color #813100
+  nav {
+    position: relative;
+    line-height: 45px;
+    h4 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+    a {
+      position: absolute
+      top: 0px
+      display: block
+      width 35px
+      height 35px
+      top 5px
+      text-indent -9999px
+    }
+    .btn-back {
+      //background-image url("./../img/back.png")
+      background-repeat no-repeat
+      background-position 50% 50%
+      left 10px
+    }
+    .btn-friend {
+      //background-image url("./../img/finder.png")
+      background-repeat no-repeat
+      //background-position -36px -2px
+      right 15px
+    }
+    .btn-trade {
+      //background-image url("./../img/industry.png")
+      background-repeat no-repeat
+      right 15px
+    }
+  }
+}
+
+
+/* 底部 */
+footer{
+  margin:20px 10px;
+  clear:both;
+  overflow:hidden;
+  color:#888;
+  font-size:14px;
+  p {
+    padding 3px 0
+    margin auto
+    text-align center
+  }
+  a, a:link {
+    color #baa901
+    margin-right 10px
+    margin-left 10px
+  }
+}
+
+.row
+  display-box()
+  margin 10px auto
+
+.col1
+  box-flex 1
+
+.col2
+  box-flex 2
+
+.col3
+  box-flex 3
+
+section
+  margin  10px
+
+//@import "searchform"
+//@import "loading"
+@import "floatdialog"
