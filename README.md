@@ -18,4 +18,12 @@ webpack打包采用编程的思想，不像grunt一样使用配置的方式，�
 ## 怎么分离出多个入口文件的公共模块
     1. 一个项目会有多个入口文件，有一些公共模块会被多个入口依赖，如果每个入口都打包这些公共模块，会很浪费。
     2. 一个入口文件依赖的模块很多，打包成一个js文件，文件很大，需要分多个文件打包。
-
+    3. entry增加d    
+        entry: {
+    		a: './src/a',
+    		d: ['./src/d'],  //需要分离出的公共模块
+            main:'./css/main.styl'
+    	}
+    4. 插件模块增加
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"d", /* filename= */"d.bundle.js")
+    
