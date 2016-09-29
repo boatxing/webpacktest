@@ -37,8 +37,17 @@ webpack打包采用编程的思想，不像grunt一样使用配置的方式，�
         loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
     }
 ## 怎么编译jsx文件
-    <code>{
+    react-hot!jsx-loader?harmony
+    {
         test: /\.jsx$/,
     	exclude: /node_modules/,  //排除这个目录下的文件
     	loader: 'react-hot!jsx-loader?harmony'
-    }</code>
+    }
+-------------------------
+如果项目中使用模块化开发模式，如seajs，那么经过webpack打包后，页面只需要引入打包后的js文件即可，不需要再引入seajs.js和
+<script>
+seajs.use("htmlTemplate", function(m){
+    m.init();
+})
+</script>
+    
