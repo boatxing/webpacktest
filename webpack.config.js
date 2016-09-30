@@ -3,13 +3,13 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
 		a: './src/a',
-		d: ['./src/d'],
+		d: ['./src/d'],  //需要分离出的公共模块
         main:'./css/main.styl'
 	},
     output: {
         path: './bin',
 		filename: "[name].js",
-        chunkFilename: "[id].js"
+        chunkFilename: "[id].js"  //需要分离出的公共模块压缩后的文件名
     },
 	module: {
 		loaders: [
@@ -26,7 +26,7 @@ module.exports = {
             },
 			{
 				test: /\.jsx$/,
-				exclude: /node_modules/,
+				exclude: /node_modules/,  //排除这个目录下的文件
 				loader: 'react-hot!jsx-loader?harmony'
 			}
         ]
